@@ -5,7 +5,7 @@ import pandas as pd
 # Função para carregar dados do arquivo Parquet
 def load_data():
     con = duckdb.connect()
-    df = con.execute("SELECT * FROM 'data/measurements_summary.parquet'").df()
+    df = con.execute("SELECT * FROM 'data\measurements_summary.parquet'").df()
     con.close()
     return df
 
